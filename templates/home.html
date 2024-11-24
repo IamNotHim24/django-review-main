@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% comment "" %}
+Name: Ryan Kirkbride
+Date: 3/1/2023
+Class: CIS218-Barnes
+{% endcomment %}
+{% block content %}
+  {% for restaurant in restaurant_list %}
+    <div class="post-entry">
+      <h2><a href="{% url 'restaurant_detail' restaurant.pk %}">{{ restaurant.restaurant_name }}</a></h2>
+      <p></p>
+    </div>
+  {% endfor %}
+{% endblock content %}
